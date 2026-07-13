@@ -1,134 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Mywifee ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Wifeee 🤍</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd6e8, #fff);
+    color: #444;
+    text-align: center;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.container {
+    padding: 30px 20px;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+h1 {
+    color: #ff4f9a;
+    font-size: 35px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff9fc9;
+}
+
+button {
+    background: #ff4f9a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff287e;
+}
+
+.hidden {
+    display: none;
+}
+
+.heart {
+    font-size: 40px;
+    animation: naik 1s infinite alternate;
+}
+
+@keyframes naik {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+</style>
+
 </head>
 
 <body>
 
-<div id="stars"></div>
+<div class="container">
 
-<div class="hero">
+<div class="card">
 
-<h2>🌹 For My Beautiful Girl 🌹</h2>
+<div class="heart">🤍</div>
 
-<h1>My Wifee🤍</h1>
-
-<p>
-17 Juli adalah hari dimana dunia menjadi lebih indah,
-karena seseorang yang sangat berarti lahir.
-</p>
-
-<button id="openGift">
-💖 Buka Hadiah
-</button>
-
-</div>
-
-
-<section id="birthday" class="hidden">
-
-<h1 class="title">
-Happy Birthday ❤️
-</h1>
-
-<p class="typing">
-
-Semoga di umur yang baru ini kamu selalu sehat,
-bahagia,
-panjang umur,
-dimudahkan semua urusan,
-dan semua impianmu menjadi kenyataan.
-
-Terima kasih karena sudah hadir di hidupku.
-
-Aku bersyukur dipertemukan dengan perempuan sebaik kamu.
-
-Aku sayang kamu,
-hari ini,
-besok,
-dan seterusnya.
-
-❤️
-
-</p>
-
-<div class="gallery">
-
-<img src="assets/photo1.jpg">
-
-<img src="assets/photo2.jpg">
-
-<img src="assets/photo3.jpg">
-
-<img src="assets/photo4.jpg">
-
-</div>
-
-<button id="letterButton">
-
-💌 Baca Surat
-
-</button>
-
-</section>
-
-
-
-<div id="letter" class="hidden">
-
-<div class="paper">
-
-<h2>To my dearest wifee❤️</h2>
+<h1>Happy Birthday<br>My Wifeee 🤍</h1>
 
 <p>
-
-Happy Birthday sayangku.
-
-Semoga senyummu tidak pernah hilang.
-
-Semoga setiap langkahmu selalu dipenuhi
-kebahagiaan.
-
-Terima kasih telah menjadi bagian
-terindah dalam hidupku.
-
-Aku akan selalu mendoakanmu.
-
-I Love You ❤️
-
+Selamat ulang tahun sayangku ❤️
 </p>
 
-<button id="closeLetter">
+<img src="foto.jpg">
 
-Tutup
+<p>
+Terima kasih sudah hadir di hidup aku.
+Terima kasih sudah selalu menemani,
+menjadi tempat cerita, dan membuat hari-hari aku lebih berwarna.
+</p>
 
-</button>
+<button onclick="buka()">Klik disini sayang 🤍</button>
 
 </div>
 
+
+<div class="card hidden" id="pesan">
+
+<h2>Untuk kamu 🤍</h2>
+
+<p>
+Aku berharap di umur kamu yang baru ini,
+semoga kamu selalu diberikan kesehatan,
+kebahagiaan, dan semua hal baik yang kamu impikan.
+
+Aku mungkin belum sempurna,
+tapi aku akan selalu berusaha menjadi seseorang
+yang bisa membuat kamu merasa dicintai.
+
+Jangan lupa kalau ada aku yang selalu sayang sama kamu 🤍
+</p>
+
+<h2>Love you always 💕</h2>
+
 </div>
 
 
+</div>
 
-<audio id="music" loop>
 
-<source src="assets/music/perfect.mp3">
+<script>
 
-</audio>
+function buka(){
+document.getElementById("pesan").style.display="block";
+}
 
-<script src="script.js"></script>
+</script>
+
 
 </body>
-
 </html>
