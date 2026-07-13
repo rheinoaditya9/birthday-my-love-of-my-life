@@ -98,3 +98,62 @@ giftButton.addEventListener("click",()=>{
     }
 
 });
+// ==========================
+// Typing Effect
+// ==========================
+
+const message = `
+Happy Birthday My Wifeee ❤️
+
+Semoga di umur yang baru ini,
+kamu selalu sehat,
+bahagia,
+dan semua impianmu tercapai.
+
+Terima kasih sudah hadir di hidupku.
+
+Aku bersyukur bisa mengenalmu.
+
+I love you more than yesterday,
+but less than tomorrow.
+
+❤️
+`;
+
+const typingTarget = document.querySelector("#birthdayPage p");
+
+let i = 0;
+
+function typingEffect() {
+
+    if (!typingTarget) return;
+
+    typingTarget.innerHTML = "";
+
+    const timer = setInterval(() => {
+
+        typingTarget.innerHTML += message.charAt(i);
+
+        i++;
+
+        if (i >= message.length) {
+
+            clearInterval(timer);
+
+        }
+
+    }, 40);
+
+}
+
+giftButton.addEventListener("click", () => {
+
+    i = 0;
+
+    setTimeout(() => {
+
+        typingEffect();
+
+    }, 800);
+
+});
