@@ -55,3 +55,123 @@ button:hover{
 .hidden{
     display:none;
 }
+/* ===== Background ===== */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at top,#3d1b52 0%,#15152d 40%,#070b18 100%);
+    z-index:-3;
+}
+
+/* ===== Overlay Pink ===== */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(
+        rgba(255,182,193,.05),
+        rgba(255,105,180,.10)
+    );
+    z-index:-2;
+}
+
+/* ===== Glass Card ===== */
+
+.hero{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:25px;
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+/* ===== Judul ===== */
+
+.small{
+    color:#ffd4e5;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:.9rem;
+}
+
+.title{
+    font-family:'Great Vibes',cursive;
+    font-size:4rem;
+    color:#ffd4e5;
+}
+
+/* ===== Birthday Page ===== */
+
+#birthdayPage{
+    max-width:900px;
+    margin:100px auto;
+    text-align:center;
+    padding:40px;
+}
+
+#birthdayPage p{
+    margin-top:20px;
+    line-height:2;
+}
+
+/* ===== Surat ===== */
+
+#letter{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.paper{
+    width:90%;
+    max-width:650px;
+    background:white;
+    color:#333;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.paper h2{
+    color:#ff4f94;
+    margin-bottom:20px;
+    font-family:'Great Vibes',cursive;
+    font-size:2.7rem;
+}
+
+.paper p{
+    line-height:2;
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:768px){
+
+.name{
+    font-size:2rem;
+}
+
+.title{
+    font-size:3rem;
+}
+
+button{
+    width:100%;
+}
+
+.hero{
+    width:95%;
+    padding:30px;
+}
+
+}
