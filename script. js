@@ -1,1 +1,100 @@
+// ==============================
+// Birthday Website for My Wifee❤️
+// ==============================
 
+const giftButton = document.getElementById("giftButton");
+const birthdayPage = document.getElementById("birthdayPage");
+const hero = document.querySelector(".hero");
+
+const letter = document.getElementById("letter");
+const letterButton = document.getElementById("letterButton");
+const closeLetter = document.getElementById("closeLetter");
+
+const music = document.getElementById("music");
+
+// Buka hadiah
+giftButton.addEventListener("click", () => {
+
+    hero.classList.add("hidden");
+
+    birthdayPage.classList.remove("hidden");
+
+    // Putar musik jika ada
+    if(music){
+        music.play().catch(()=>{
+            console.log("Browser meminta interaksi pengguna.");
+        });
+    }
+
+    // Scroll halus
+    birthdayPage.scrollIntoView({
+        behavior:"smooth"
+    });
+
+});
+
+// Buka surat
+letterButton.addEventListener("click",()=>{
+
+    letter.classList.remove("hidden");
+
+});
+
+// Tutup surat
+closeLetter.addEventListener("click",()=>{
+
+    letter.classList.add("hidden");
+
+});
+// ==========================
+// Floating Hearts ❤️
+// ==========================
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.innerHTML="❤️";
+
+    heart.style.position="fixed";
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.top="-30px";
+
+    heart.style.fontSize=(20+Math.random()*20)+"px";
+
+    heart.style.pointerEvents="none";
+
+    heart.style.zIndex="9999";
+
+    heart.style.transition="transform 6s linear, top 6s linear";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+
+        heart.style.top="110vh";
+
+        heart.style.transform="rotate(360deg)";
+
+    },50);
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },6000);
+
+}
+
+// Saat tombol hadiah ditekan
+giftButton.addEventListener("click",()=>{
+
+    for(let i=0;i<40;i++){
+
+        setTimeout(createHeart,i*120);
+
+    }
+
+});
